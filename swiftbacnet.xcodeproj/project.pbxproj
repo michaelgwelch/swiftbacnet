@@ -10,6 +10,8 @@
 		E37BE3221EFC95FD00285452 /* swiftbacnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37BE3181EFC95FD00285452 /* swiftbacnet.framework */; };
 		E37BE3271EFC95FD00285452 /* swiftbacnetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BE3261EFC95FD00285452 /* swiftbacnetTests.swift */; };
 		E37BE3291EFC95FD00285452 /* swiftbacnet.h in Headers */ = {isa = PBXBuildFile; fileRef = E37BE31B1EFC95FD00285452 /* swiftbacnet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E37BE3331EFC964400285452 /* InputStreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BE3321EFC964400285452 /* InputStreamExtensions.swift */; };
+		E37BE3351EFC96BB00285452 /* InputStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BE3341EFC96BB00285452 /* InputStreamTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E37BE3211EFC95FD00285452 /* swiftbacnetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftbacnetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37BE3261EFC95FD00285452 /* swiftbacnetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftbacnetTests.swift; sourceTree = "<group>"; };
 		E37BE3281EFC95FD00285452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37BE3321EFC964400285452 /* InputStreamExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStreamExtensions.swift; sourceTree = "<group>"; };
+		E37BE3341EFC96BB00285452 /* InputStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStreamTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		E37BE31A1EFC95FD00285452 /* swiftbacnet */ = {
 			isa = PBXGroup;
 			children = (
+				E37BE3321EFC964400285452 /* InputStreamExtensions.swift */,
 				E37BE31B1EFC95FD00285452 /* swiftbacnet.h */,
 				E37BE31C1EFC95FD00285452 /* Info.plist */,
 			);
@@ -80,6 +85,7 @@
 		E37BE3251EFC95FD00285452 /* swiftbacnetTests */ = {
 			isa = PBXGroup;
 			children = (
+				E37BE3341EFC96BB00285452 /* InputStreamTests.swift */,
 				E37BE3261EFC95FD00285452 /* swiftbacnetTests.swift */,
 				E37BE3281EFC95FD00285452 /* Info.plist */,
 			);
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					E37BE3171EFC95FD00285452 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					E37BE3201EFC95FD00285452 = {
@@ -196,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37BE3331EFC964400285452 /* InputStreamExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37BE3351EFC96BB00285452 /* InputStreamTests.swift in Sources */,
 				E37BE3271EFC95FD00285452 /* swiftbacnetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +328,7 @@
 		E37BE32D1EFC95FD00285452 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -332,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.welch.swiftbacnet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -339,6 +350,7 @@
 		E37BE32E1EFC95FD00285452 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -359,6 +371,7 @@
 		E37BE3301EFC95FD00285452 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = swiftbacnetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -371,6 +384,7 @@
 		E37BE3311EFC95FD00285452 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = swiftbacnetTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
