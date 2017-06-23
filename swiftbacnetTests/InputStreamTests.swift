@@ -199,6 +199,26 @@ extension InputStreamTests {
         assert(bytes, whenReadUsingMethod: readFloat, areEqualTo: -Float.leastNormalMagnitude)
     }
 
+    func testReadFloatPosInf() {
+        let bytes:[UInt8] = [0x7F, 0x80, 0x00, 0x00]
+        assert(bytes, whenReadUsingMethod: readFloat, meetExpectation: { $0.isPositiveInfinite })
+    }
+
+    func testReadFloatNegInf() {
+        let bytes:[UInt8] = [0xFF, 0x80, 0x00, 0x00]
+        assert(bytes, whenReadUsingMethod: readFloat, meetExpectation: { $0.isNegativeInfinite })
+    }
+
+    func testReadFloatNegativeZero() {
+        let bytes:[UInt8] = [0x80, 0x00, 0x00, 0x00]
+        assert(bytes, whenReadUsingMethod: readFloat, areEqualTo: -0.0)
+    }
+
+    func testReadFloatNan() {
+        let bytes:[UInt8] = [0x7F, 0x80, 0x00, 0x01]
+        assert(bytes, whenReadUsingMethod: readFloat, meetExpectation: { $0.isNaN })
+    }
+
 }
 
 /**
